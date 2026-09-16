@@ -2,7 +2,7 @@ name: Update Blog Feeds
  
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours, UTC (GitHub may delay this slightly under load)
+    - cron: "0 */8 * * *"   # every 8 hours, UTC (GitHub may delay this slightly under load)
   workflow_dispatch: {}      # adds a manual "Run workflow" button in the Actions tab
  
 permissions:

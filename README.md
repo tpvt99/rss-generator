@@ -7,3 +7,9 @@ Questions:
 
 
 - generate_feeds.py: runner, loops over every site
+- feed_builder.py : shared RSS writer, should not be touched
+sites/
+    __init__.py: empty, just make it as a package
+    alignment_anthropic.py : for anthropic alignment blog
+
+.github/workflows/update-feed.yml: to auto work for github, update every 8 hours
