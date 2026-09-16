@@ -18,8 +18,8 @@ from feed_builder import build_feed
 from sites import pi_website, alignment_anthropic
 
 SITES = [
-    pi_website,
     alignment_anthropic,
+    #pi_website,
     # add more site adapters here as you write them
 ]
 
@@ -29,7 +29,7 @@ def main():
 
     for site in SITES:
         try:
-            articles = site.fetch_artciles()
+            articles = site.fetch_articles()
             if not articles:
                 raise RuntimeError("no articles found")
             build_feed(
