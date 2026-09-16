@@ -23,7 +23,8 @@ jobs:
       - run: python generate_feeds.py
  
       - name: Record that we checked (keeps the schedule from ever going idle)
-        run: date -u +"Last checked: %Y-%m-%dT%H:%M:%SZ" > last-checked.txt
+        run: |
+          date -u +"Last checked: %Y-%m-%dT%H:%M:%SZ" > last-checked.txt
  
       - name: Commit and push if anything changed
         run: |
