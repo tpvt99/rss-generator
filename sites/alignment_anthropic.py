@@ -50,9 +50,7 @@ def fetch_articles():
     for child in table_of_content.children:
         if child.name == "div" and "date" in child.get("class", []):
             maybe_date = child.get_text(strip=True)
-            print(maybe_date)
             current_date = parse_month_year(maybe_date)
-            print(current_date)
 
         elif child.name == "a":
             href = child.get("href", "")

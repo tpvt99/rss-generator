@@ -21,7 +21,7 @@ def build_feed(source_url, feed_title, description, articles, output_file):
     fg.language("en")
 
     for article in articles:
-        fe = fg.add_entry()
+        fe = fg.add_entry(order='append')
         fe.id(article["url"])
         fe.title(article["title"])
         fe.link(href=article["url"])
